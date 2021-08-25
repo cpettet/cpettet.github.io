@@ -8,26 +8,58 @@ html {
   scroll-behavior: smooth;
 }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 8vh;
-  background-color: #5d4954;
+body {
+  font-size: 16px;
 }
 
-.logo {
-  color: #e7e7e7;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  letter-spacing: 5px;
+nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background-color: #5d4954;
+  position: fixed;
+  top: 0;
+  right: 0;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  padding: 4rem;
+}
+
+.banner__container {
+  height: 25rem;
+}
+
+.banner {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.avatar__container {
+  border-radius: 100%;
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+}
+
+.avatar {
+  width: 15rem;
+  display: inline;
+  margin: 0 auto;
+  border-radius: 100%;
 }
 
 .nav__links {
   display: flex;
-  width: 30%;
-  justify-content: space-around;
+  justify-content: space-evenly;
   color: #e7e7e7;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
 }
 
 .nav__links li {
@@ -44,7 +76,9 @@ nav {
   display: none;
 }
 
-.line1, .line2, .line3 {
+.line1,
+.line2,
+.line3 {
   width: 2rem;
   height: 0.25rem;
   background-color: #e7e7e7;
@@ -57,6 +91,11 @@ nav {
   .nav__links {
     width: 60%;
   }
+
+  nav {
+    width: 30%;
+    padding: 1rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -65,8 +104,19 @@ nav {
   }
 
   nav {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    width: 100%;
     padding: 2rem;
+  }
+
+  .avatar__container {
+    display: none;
   }
 
   .nav__links {
@@ -74,7 +124,7 @@ nav {
     position: absolute;
     right: 0px;
     height: 92vh;
-    top: 8vh;
+    top: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
