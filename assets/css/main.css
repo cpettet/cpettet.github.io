@@ -12,6 +12,23 @@ body {
   font-size: 16px;
 }
 
+.wrapper {
+  width: 70%;
+  overflow-x: hidden;
+}
+
+.skills__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0.1rem 0.1rem;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . . . ."
+    ". . . . ."
+    ". . . . .";
+}
+
 nav {
   display: flex;
   align-items: center;
