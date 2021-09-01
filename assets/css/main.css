@@ -13,7 +13,7 @@ body {
 }
 
 .wrapper {
-  width: 70%;
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -32,15 +32,10 @@ body {
 nav {
   display: flex;
   align-items: center;
-  height: 100%;
   background-color: #5d4954;
-  position: fixed;
-  top: 0;
-  right: 0;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-evenly;
-  padding: 4rem;
 }
 
 .banner__container {
@@ -53,40 +48,29 @@ nav {
   height: 100%;
 }
 
-.avatar__container {
-  border-radius: 100%;
-  width: 100%;
-  height: fit-content;
-  overflow: hidden;
-  padding: 0;
-  display: flex;
-}
-
-.avatar {
-  width: 15rem;
-  display: inline;
-  margin: 0 auto;
-  border-radius: 100%;
-}
-
 .nav__links {
   display: flex;
   justify-content: space-evenly;
   color: #e7e7e7;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
   align-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .nav__links li {
   list-style: none;
+  width: 100%;
+  text-align: center;
 }
 
 .nav__link {
   color: #e7e7e7;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.5rem;
+  width: 100%;
 }
 
 .menu {
@@ -106,11 +90,15 @@ nav {
 
 @media screen and (max-width: 1280px) {
   .nav__links {
-    width: 60%;
+    width: 100%;
+  }
+
+  .nav__link {
+    font-size: 1.0rem;
   }
 
   nav {
-    width: 30%;
+    width: 100%;
     padding: 1rem;
   }
 }
@@ -118,6 +106,10 @@ nav {
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
+  }
+
+  .wrapper {
+    width: 100%;
   }
 
   nav {
@@ -129,25 +121,31 @@ nav {
     left: 0;
     height: 2rem;
     width: 100%;
-    padding: 2rem;
-  }
-
-  .avatar__container {
-    display: none;
+    padding: 1.5rem;
   }
 
   .nav__links {
     background-color: #5d4954;
     position: absolute;
     right: 0px;
-    height: 92vh;
-    top: 4rem;
+    top: 0px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 40%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+  }
+
+  .nav__link {
+    color: #e7e7e7;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
   }
 
   .nav__link li {

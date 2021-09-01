@@ -10,3 +10,11 @@
     menu.classList.toggle("toggle");
   });
 })();
+
+const siteUrl = window.location.pathname.split("/");
+const nav = document.querySelectorAll(".nav__links");
+const about = nav[0];
+const skillsAndTech = nav[1];
+const projects = nav[2];
+const contact = nav[3];
+const resume = nav[4];
