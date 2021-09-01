@@ -16,19 +16,33 @@
     // for menu animation
     menu.classList.toggle("toggle");
 
-    // adds event listener to minimize menu
+    // adds event listener to minimize menu, after 0.1s
     setTimeout(() => {
       wrapper.addEventListener("click", wrapEvent);
     }, 100);
   });
 })();
 
-const siteUrl = document.location.href.split("#");
-console.log("Site url:", siteUrl);
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav__links li");
 
-const nav = document.querySelectorAll(".nav__links");
-const about = nav[0];
-const skillsAndTech = nav[1];
-const projects = nav[2];
-const contact = nav[3];
-const resume = nav[4];
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+
+    if (pageYOffset >= (sectionTop - sectionHeight / 5)) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.remove("nav__link-active");
+    if (link.classList.contains(current)) {
+      console.log("current:", current);
+      link.classList.add("nav__link-active");
+    }
+  });
+});

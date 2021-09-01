@@ -14,11 +14,11 @@
         <h1>Christian Pettet</h1>
       </a>
       <ul class="nav__links">
-        <li><a class="nav__link" href="#about" class="active">About</a></li>
-        <li><a class="nav__link" href="#skills-and-tech">Skills and Tech</a></li>
-        <li><a class="nav__link" href="#projects">Projects</a></li>
-        <li><a class="nav__link" href="#contact">Contact</a></li>
-        <li><a class="nav__link" href="#resume">Resume</a></li>
+        <li class="about nav__link-active"><a class="nav__link" href="#about">About</a></li>
+        <li class="skills-and-tech"><a class="nav__link" href="#skills-and-tech">Skills and Tech</a></li>
+        <li class="projects"><a class="nav__link" href="#projects">Projects</a></li>
+        <li class="contact"><a class="nav__link" href="#contact">Contact</a></li>
+        <li class="resume"><a class="nav__link" href="#resume">Resume</a></li>
       </ul>
       <div class="menu">
         <div class="line1"></div>
@@ -31,9 +31,9 @@
         <img src="/images/banner.jpg" class="banner" />
       </div>
   
-      <section id="about">
-        <h3>About Me</h3>
-        <p>
+      <h1>About Me</h1>
+      <section id="about" class="about">
+        <p class="about__paragraph">
           I am a full stack engineer with experience in Python, Javascript,
           React.js, Redux, and PostgreSQL. Originally from the foothills of
           Appalachia, I received a degree in bioengineering and moved to the Bay
@@ -43,11 +43,11 @@
           with the user experience in mind and changed careers to focus on
           creating bespoke applications.
         </p>
-        <p>
+        <p class="about__paragraph">
           I enjoy pair-programming with others on a team, or tackling issues on my
           own. I prefer direct face-to-face feedback from others and my managers.
         </p>
-        <p>
+        <p class="about__paragraph">
           My home away from home is the gym where I enjoy powerlifting. I enjoy
           following my Cincinnati Bengals and all things NFL, taking my girlfriend
           and dog on adventures, listening to music, and starting new DIY projects

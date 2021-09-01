@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
 * {
   margin: 0px;
   padding: 0px;
@@ -10,11 +12,25 @@ html {
 
 body {
   font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
 }
 
 .wrapper {
   width: 100%;
   overflow-x: hidden;
+}
+
+.about {
+  columns: 2 500px;
+}
+
+.about__paragraph {
+  font-size: 2.5rem;
+  margin-top: 0;
 }
 
 .skills__container {
@@ -36,6 +52,9 @@ nav {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-evenly;
+
+  position: sticky;
+  top: 0;
 }
 
 .banner__container {
@@ -60,6 +79,7 @@ nav {
 }
 
 .nav__links li {
+  color: #e7e7e7;
   list-style: none;
   width: 100%;
   text-align: center;
@@ -71,6 +91,16 @@ nav {
   font-weight: bold;
   font-size: 1.5rem;
   width: 100%;
+}
+
+.nav__link-active {
+  color: red;
+  background-color: blue;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  width: 100%;
+  transition: 0.3s ease background-color;
 }
 
 .menu {
