@@ -25,8 +25,31 @@ h1 {
 }
 
 .about {
-  columns: 2 500px;
   margin: 1rem 1rem 0 1rem;
+
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: ". .";
+}
+
+.about__wrapper__image {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__wrapper__paragraphs {
+  columns: 2 400px;
+}
+
+.avatar {
+  border-radius: 10%;
+  width: 70%;
 }
 
 .section__header {
@@ -63,7 +86,7 @@ h1 {
 .skill {
   border-radius: 7.5%;
   padding: 0.2rem;
-  width: 7rem;
+  width: 4.5rem;
 
   transition: 0.25s ease all;
 }
@@ -170,8 +193,8 @@ nav {
     width: 100%;
   }
 
-  .nav__name {
-    font-size: 3.5rem;
+  h1 {
+    font-size: 2rem;
   }
 
   nav {
@@ -184,6 +207,15 @@ nav {
     height: 4rem;
     width: 100%;
     padding: 1.5rem;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about__wrapper__image {
+    margin-bottom: 1.15rem;
   }
 
   .nav__links {
