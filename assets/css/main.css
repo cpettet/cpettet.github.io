@@ -66,7 +66,7 @@ h1 {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  align-items: stretch;
+  align-items: center;
 }
 
 .skills__container {
@@ -81,6 +81,7 @@ h1 {
     ". . . . . .";
   margin: 2rem;
   justify-items: center;
+  width: 60%;
 }
 
 .skill {
@@ -167,6 +168,41 @@ nav {
   margin: 0.4rem;
   border-radius: 0.5rem;
   transition: all 0.5s ease;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  margin: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+
+.image {
+  width: 100%;
+  transition: 0.3s ease all;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+.inner__link {
+  list-style: none;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  align-items: center;
+  justify-content: space-around;
 }
 
 @media screen and (max-width: 1280px) {
@@ -262,6 +298,10 @@ nav {
       ". . . ."
       ". . . ."
       ". . . .";
+  }
+
+  article {
+    flex-direction: column;
   }
 }
 
