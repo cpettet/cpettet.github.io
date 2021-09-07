@@ -33,7 +33,8 @@ window.addEventListener("scroll", () => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
 
-    if (pageYOffset >= (sectionTop - sectionHeight / 5)) {
+    // if (scrollY >= (sectionTop - sectionHeight / 5)) {
+    if (scrollY >= (sectionTop - sectionHeight / 10)) {
       current = section.getAttribute("id");
     }
   });
@@ -41,7 +42,6 @@ window.addEventListener("scroll", () => {
   navLinks.forEach((link) => {
     link.classList.remove("nav__link-active");
     if (link.classList.contains(current)) {
-      console.log("current:", current);
       link.classList.add("nav__link-active");
     }
   });

@@ -24,7 +24,7 @@ h1 {
   overflow-x: hidden;
 }
 
-.about {
+#about {
   margin: 1rem 1rem 0 1rem;
 
   display: grid;
@@ -171,8 +171,14 @@ nav {
 }
 
 .features {
-  display: flex;
-  flex-direction: column;
+  display: grid; 
+  grid-template-columns: 50% 50%; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". ."
+    ". ."; 
+
 }
 
 article {
@@ -186,6 +192,7 @@ article {
 
 .image {
   width: 100%;
+  padding-right: 1rem;
   transition: 0.3s ease all;
 }
 
@@ -195,6 +202,7 @@ article {
 
 .inner__link {
   list-style: none;
+  display: inline;
 }
 
 .icons {
@@ -300,8 +308,17 @@ article {
       ". . . .";
   }
 
+  .features {
+    display: flex;
+    flex-direction: column;
+  }
+
   article {
     flex-direction: column;
+  }
+
+  .image {
+    padding: unset;
   }
 }
 
