@@ -128,7 +128,9 @@ td {
 nav {
   display: flex;
   align-items: center;
-  background-color: #5d4954;
+  background: rgb(122,115,93);
+  background: linear-gradient(90deg, rgba(122,115,93,1) 50%, rgba(207,200,178,1) 100%);
+
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-evenly;
@@ -243,6 +245,28 @@ article {
   width: 20%;
   align-items: center;
   justify-content: space-around;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+}
+
+.actions__link {
+  font-size: 1.5rem;
+  list-style: none;
+  padding: 1rem 2rem;
+}
+
+.link {
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background-color: #989898;
+  color: #fafafa
+}
+
+.link__primary {
+  background-color: #7a735d;
 }
 
 @media screen and (max-width: 1280px) {
